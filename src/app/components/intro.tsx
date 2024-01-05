@@ -9,17 +9,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Intro = () => {
-    const cookieInventory = {
-        chocolate: 1,
-        sugar: 20,
-        gingerBread: 10,
-        peanutButter: 30,
-        snickeDoodle: 73,
-    }
-    const x = typeof cookieInventory;
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
-      <div className="flex justify-center items-center">
+    <section
+      // ref={ref}
+      id="home"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+      <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -34,10 +29,23 @@ const Intro = () => {
               width="192"
               height="192"
               quality="95"
-              priority
+              priority={true}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
+
+          <motion.span
+            className="absolute bottom-0 right-0 text-4xl"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 125,
+              delay: 0.1,
+              duration: 0.7,
+            }}>
+            👋
+          </motion.span>
         </div>
       </div>
 
@@ -61,10 +69,10 @@ const Intro = () => {
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          //   onClick={() => {
-          //     setActiveSection("Contact");
-          //     setTimeOfLastClick(Date.now());
-          //   }}
+          // onClick={() => {
+          //   setActiveSection("Contact");
+          //   setTimeOfLastClick(Date.now());
+          // }}>
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -80,14 +88,14 @@ const Intro = () => {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com/in/ishaan10dutta"
+          href="https://linkedin.com"
           target="_blank">
           <BsLinkedin />
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/ishaan10dutta"
+          href="https://github.com"
           target="_blank">
           <FaGithubSquare />
         </a>
