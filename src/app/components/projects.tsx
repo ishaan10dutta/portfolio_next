@@ -4,14 +4,14 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/app/lib/data";
 import Project from "./project";
-// import { useSectionInView } from "@/app/lib/hooks";
+import { useSectionInView } from "@/app/lib/hooks";
 
 export default function Projects() {
-  // const { ref } = useSectionInView("Projects", 0.5);
+  const { ref } = useSectionInView("Projects", 0.5);
 
   return (
     <section 
-    // ref={ref} 
+    ref={ref} 
     id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My projects</SectionHeading>
       <div>

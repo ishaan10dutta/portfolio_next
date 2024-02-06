@@ -7,11 +7,14 @@ import { FaGithubSquare } from "react-icons/fa";
 import display from "/public/Display.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useSectionInView } from "../lib/hooks";
 
 const Intro = () => {
+  const {ref} = useSectionInView("Home", 0.5);
+  
   return (
     <section
-      // ref={ref}
+      ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
