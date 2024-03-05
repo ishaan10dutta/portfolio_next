@@ -8,10 +8,13 @@ import display from "/public/Display.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useSectionInView } from "../lib/hooks";
+import { useActiveSectionContext } from "../context/active-section-context";
 
 const Intro = () => {
-  const {ref} = useSectionInView("Home", 0.5);
-  
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
     <section
       ref={ref}
@@ -72,11 +75,10 @@ const Intro = () => {
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          // onClick={() => {
-          //   setActiveSection("Contact");
-          //   setTimeOfLastClick(Date.now());
-          // }}>
-        >
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}>
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
