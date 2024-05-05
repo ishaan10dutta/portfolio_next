@@ -19,29 +19,40 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         After graduating with a degree in{" "}
-        <span className="font-medium">Computer Science</span>, I decided to
-        pursue my passion for programming. I enrolled in a coding bootcamp and
-        learned <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
+        <span className="font-medium">Computer Science</span> from SRM Chennai,
+        I decided to pursue my passion for programming. I landed an
+        international summer internship at Barclays at their Glasgow office in
+        my 3rd year, and successfully{" "}
+        <span className="font-medium">converted it to a full time offer</span>.{" "}
+        <span>
+          {" "}
+          I moved to Glasgow in 2022 to start my role as a Software Developer,
+          excited for a new country, company and experiences
         </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        .{" "}
+        <span className="font-medium">
+          My core stack is Typescript, React, Next.js, Node.js, and Java
+        </span>
+        . I am also comfortable with Python and C++, amongst other frameworks
+        and tools. I hold a keen interest in learning new technologies, for
+        example Solidity and smart contract programming.{" "}
+        <span className="font-medium">
+          I am currently looking for a fresh challenge as a software developer.
+        </span>
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        <span className="italic">Outside of coding</span>, I play football, and
+        have played semi professionally in India and represented my university;
+        been a{" "}
+        <span className="font-medium">
+          supporter of Arsenal since 2006 as well
+        </span>
+        . I also enjoy{" "}
+        <span className="font-medium">
+          my music, always on the lookout for gigs and new artists
+        </span>
+        .
       </p>
     </motion.section>
   );

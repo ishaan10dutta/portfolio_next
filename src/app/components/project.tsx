@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { projectsData } from "@/app/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import githubImg from "../../../public/github.svg";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,6 +14,8 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  link,
+  githubLink,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -35,6 +39,29 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
+
+          <Link
+            className="mt-2 leading-relaxed text-blue-600"
+            target="_blank"
+            href={link}>
+            {link ? "Check it out here!" : null}
+          </Link>
+
+          <Link
+            className="mt-2 leading-relaxed mb-2"
+            target="_blank"
+            href={githubLink}>
+            {githubLink ? (
+              <Image
+                alt="Github"
+                src={githubImg}
+                height={25}
+                width={25}
+                className="dark:invert"
+              />
+            ) : null}
+          </Link>
+
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li

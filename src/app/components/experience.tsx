@@ -25,7 +25,7 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor={theme === "light" ? "black" : "grey"}>
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -50,12 +50,17 @@ export default function Experience() {
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                 fontSize: "1.5rem",
+                backgroundColor: theme === "light" ? "white" : "grey",
+                color: "black",
+                border: "black",
               }}>
-              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <h3 className="font-semibold">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              <ul className="list-disc list-inside !mt-1 !font-normal text-gray-700 dark:text-white/75">
+                {item.description.split(":").map((sentence, index) => (
+                  <li key={index}>{sentence}.</li>
+                ))}
+              </ul>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

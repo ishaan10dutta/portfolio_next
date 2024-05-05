@@ -1,10 +1,12 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaJava } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "../../../public/corpcomment.png";
 import rmtdevImg from "../../../public/rmtdev.png";
 import wordanalyticsImg from "../../../public/wordanalytics.png";
+import pdfMagicImg from "../../../public/pdfMagicImg.png";
+import timeSeriesImg from "../../../public/timeSeriesImg.png";
 
 export const links = [
   {
@@ -35,52 +37,49 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Wealth Hub team, Barclays",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Part of a global team which successfully onboarded ~1.2mn customers worldwide onto the Wealth Hub application through strategic channels at Barclays, including The Barclays App and Retail Online Banking Platform:Implemented the complete migration of the account history and dashboard pages from Angular to React, leveraging our hybrid app approach to ensure a seamless transition of the system:Owned the complete development of a new feature for restricting access of customers to different parts of the application, based on their consultation journey stage with Barclays financial advisers:Currently working on building the Private Bank UI and core functionality as part of the next steps of the app roadmap:Played a key role in backend development as well, leveraging Spring Boot, Java, and REST APIs to develop an OpenAPI 3.0 compliant micro-service for Held Away Assets, a part of the Barclays Wealth Hub",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "April 2023 - present",
+  },
+  {
+    title: "Backend Developer",
+    location: "Financial Crime Team, Barclays",
+    description:
+      "Drove implementation of new search features using Spring Boot for TRAQs, a transaction indexing tool used by internal compliance teams:Worked with Java and Apache Solr to improve search performance on wire transaction data by 25%:Integrated Apache Kafka to stream live messages and changes to the SQL Server Database, to topics set up on AWS MSK for multiple consumers within compliance teams:Recognized by the EMEA director of Barclays FinCrime after identifying and fixing a indexing bug which could have escalated as a breach",
+    icon: React.createElement(FaJava),
+    date: "Aug 2022 - April 2023",
+  },
+  {
+    title: "Bachelor of Technology",
+    location: "SRM University, Chennai",
+    description:
+      "I graduated with a degree in Computer Science after a wonderful 4 years in Chennai, in which I completed internships at companies like Bosch and Barclays:It was from here that I got a full time offer, and moved to Glasgow to start my software developer job at Barclays",
+    icon: React.createElement(LuGraduationCap),
+    date: "2019-2022",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "PdfMagic",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A full stack SaaS application for interacting with your PDF files through AI chat messaging.",
+    tags: ["Typescript", "React", "Next.js", "Shadcn-ui", "OpenAI", "Prisma"],
+    imageUrl: pdfMagicImg,
+    link: "https://ishaan-pdfmagic.vercel.app/",
+    githubLink: "https://github.com/ishaan10dutta/pdfmagic",
   },
   {
-    title: "rmtDev",
+    title: "TimeSeries Analysis",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A data-science project to analyze and predict stock data trends based on different technical indicators using various models like ARIMA, CNN-LSTM.",
+    tags: ["Python", "Pandas", "LSTMs"],
+    imageUrl: timeSeriesImg,
+    githubLink: "https://github.com/ishaan10dutta/Time-Series-Forecasting-Analysis-Ensemble-in-Python",
+    link: ''
   },
 ] as const;
 

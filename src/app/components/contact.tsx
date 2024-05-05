@@ -7,9 +7,11 @@ import { useSectionInView } from "@/app/lib/hooks";
 import toast from "react-hot-toast";
 import SubmitBtn from "./submit-btn";
 import { sendEmail } from "../actions/sendEmail";
+import { useTheme } from "../context/theme-context";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const { theme } = useTheme();
 
   return (
     <motion.section
@@ -27,8 +29,7 @@ export default function Contact() {
       }}
       viewport={{
         once: true,
-      }}
-    >
+      }}>
       <SectionHeading>Contact me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
@@ -50,8 +51,7 @@ export default function Contact() {
           }
 
           toast.success("Email sent successfully!");
-        }}
-      >
+        }}>
         <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
@@ -59,6 +59,7 @@ export default function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
+          style={{ borderColor: theme === "light" ? "black" : "white" }}
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
@@ -66,6 +67,7 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
+          style={{ borderColor: theme === "light" ? "black" : "white" }}
         />
         <SubmitBtn />
       </form>

@@ -62,7 +62,7 @@ const Intro = () => {
         <span className="font-bold">Hello, I'm Ishaan,</span> a{" "}
         <span className="font-bold">full-stack developer</span> with{" "}
         <span className="font-bold">2 years</span> of experience. My areas of
-        expertise are <span className="underline">React (Next.js)</span>.
+        expertise are <span className="underline"> Typescript and React (Next.js)</span>.
       </motion.h1>
 
       <motion.div
@@ -85,7 +85,7 @@ const Intro = () => {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href="/ishaan_2024_cv.pdf"
           download>
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -93,14 +93,14 @@ const Intro = () => {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://linkedin.com/in/ishaan10dutta"
           target="_blank">
           <BsLinkedin />
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://github.com/ishaan10dutta"
           target="_blank">
           <FaGithubSquare />
         </a>
